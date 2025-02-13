@@ -1,0 +1,185 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+    color: #333;
+    line-height: 1.6;
+}
+.container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1 {
+    font-size: 24px;
+    color: #007bff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555;
+}
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+}
+.form-group input:focus, .form-group select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+button:hover {
+    background: #0056b3;
+}
+.results {
+    margin-top: 30px;
+}
+.results h2 {
+    font-size: 20px;
+    color: #007bff;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 8px;
+    margin-bottom: 20px;
+}
+#selectedOrcamentos {
+    margin-top: 20px;
+}
+.message {
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+.totals {
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+    margin-top: 30px;
+}
+.totals span {
+    font-weight: bold;
+    color: #007bff;
+}
+#copyButton {
+    margin-top: 20px;
+    background: #28a745;
+}
+#copyButton:hover {
+    background: #218838;
+
+}
+
+/* Estilos do widget da calculadora */
+#calculator {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+    overflow: hidden;
+}
+
+#calculator img {
+    width: 30px;
+    height: 30px;
+}
+
+#calculator.expanded {
+    width: 300px;
+    height: 450px;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    cursor: default;
+}
+
+#calculator.expanded img {
+    display: none; /* Esconde o ícone ao expandir */
+}
+
+.calculator-content {
+    display: none;
+    width: 100%;
+}
+
+#calculator.expanded .calculator-content {
+    display: block;
+}
+
+/* Botão de fechar a calculadora */
+#closeCalculator {
+position: absolute;
+top: 10px; /* Ajusta a posição vertical */
+left: 150px; /* Ajusta a posição horizontal */
+background: none; /* Remove o fundo azul */
+color: #007bff; /* Cor do "X" */
+border: none; /* Remove borda */
+font-size: 16px; /* Tamanho da fonte do "X" */
+font-weight: bold; /* Peso do "X" */
+cursor: pointer; /* Cursor em formato de mão */
+line-height: normal; /* Remove inconsistências de altura de linha */
+padding: 0; /* Remove espaço interno */
+}
+
+
+
+#calculator.expanded #closeCalculator {
+    display: block;
+}
+
+
+#perfil {
+
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: width 0.3s ease, height 0.3s ease, border-radius 0.3s ease;
+    overflow: hidden;
+}

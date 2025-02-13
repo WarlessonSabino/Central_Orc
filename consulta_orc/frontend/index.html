@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Orçamentos</title>
+    <link rel="stylesheet" href="/consulta_orc/frontend/css/style.css">
+
+
+</head>
+<body>
+    <div class="container">
+        <h1>Pharmes - Consulta Orçamentos</h1>
+        <div class="form-group">
+            <label for="cdfil">Filial</label>
+            <input type="text" id="cdfil" placeholder="Digite o código da filial">
+        </div>
+        <div class="form-group">
+            <label for="nrorc">Número do Orçamento</label>
+            <input type="text" id="nrorc" placeholder="Digite o número do orçamento">
+        </div>
+        <button id="fetchData">Consultar</button>
+
+        <div class="results" id="results" style="display: none;">
+            <h2>Resultados</h2>
+            <div>
+                <label>
+                    <input type="checkbox" id="selectAll"> Selecionar Todos
+                </label>
+            </div>
+            <div id="options"></div>
+        </div>
+
+        <div id="selectedOrcamentos"></div>
+
+        <div class="totals" id="totals">
+            <div>💰 Total Bruto: <span>R$ 0.00</span></div>
+            <div>🎉 Total Desconto: <span>R$ 0.00</span></div>
+            <div>💲 Total Geral: <span>R$ 0.00</span></div>
+        </div>
+
+        <button id="copyButton" style="display: none;">Copiar Orçamentos</button>
+    </div>
+
+    <div id="calculator">
+    <img id="calculatorIcon" src="imagens/calculator.svg" alt="Abrir Calculadora">
+    
+    <div class="calculator-content">
+        <button id="closeCalculator">X</button>
+        <h3>Calculadora de Preço</h3>
+        <div class="form-group">
+            <label for="currentTreatment">Tempo de Tratamento Atual:</label>
+            <select id="currentTreatment">
+                <option value="30">30 dias</option>
+                <option value="60">60 dias</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="simulateFor">Simular para:</label>
+            <select id="simulateFor">
+                <option value="30">30 dias</option>
+                <option value="60">60 dias</option>
+                <option value="90">90 dias</option>
+                <option value="120">120 dias</option>
+            </select>
+        </div>
+        <button id="calculatePrice">Calcular</button>
+        <div id="calculationResult"></div>
+    </div>
+</div>
+
+
+<script  src="/consulta_orc/frontend/script/formatQuantidadeDosagem.js"></script>
+<script  src="/consulta_orc/frontend/script/renderResults.js"></script>
+<script  src="/consulta_orc/frontend/script/updateSelected.js"></script>
+
+</body>
+</html>
